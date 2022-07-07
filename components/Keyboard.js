@@ -70,7 +70,6 @@ const Keyboard = ({usedKeys, handleKeyClick}) => {
   const [letters, setLetters] = useState(keyboard);
 
   const handleClick = (e) => {
-    console.log(e.target.innerHTML);
     handleKeyClick(e.target.innerHTML);
   };
 

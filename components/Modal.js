@@ -26,9 +26,9 @@ const Modal = ({isCorrect, turn, solution}) => {
             <div className="relative flex-auto p-6">
               <p className="my-4 text-lg leading-relaxed text-slate-500">
                 {isCorrect
-                  ? `Congrats! You won in ${turn}` === 1
-                    ? `${turn} try`
-                    : `${turn} tries`
+                  ? turn === 1
+                    ? `Congrats! You won in ${turn} try`
+                    : `Congrats! You won in ${turn} tries`
                   : `The correct word is ${solution}`}
               </p>
             </div>

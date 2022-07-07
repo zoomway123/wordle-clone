@@ -40,7 +40,6 @@ const Game = ({solution}) => {
 
   return (
     <div>
-      {solution}
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
       <Keyboard usedKeys={usedKeys} handleKeyClick={handleKeyClick} />
       {showModal && (

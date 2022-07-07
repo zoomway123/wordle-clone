@@ -19,7 +19,7 @@ export default function Home() {
   }, [setSolution]);
 
   return (
-    <div className="bg-[#121213] h-screen">
+    <div className="">
       <Header />
       {solution && <Game solution={solution} />}
     </div>

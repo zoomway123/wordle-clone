@@ -119,7 +119,41 @@ const useWordle = (solution) => {
     }
   };
 
+  const handleKeyClick = (key) => {
+    if (key === 'Enter') {
+      //only add if turn is less than 5
+      if (turn > 5) {
+        console.log('used all guesses');
+        return;
+      }
+      // cannot be duplicate
+      if (history.includes(currentGuess)) {
+        console.log('duplicate word');
+        return;
+      }
+      //must be 5 char long
+      if (currentGuess.length !== 5) {
+        console.log('not long enough');
+        return;
+      }
+
+      const formatted = formatGuess();
+      addNewGuess(formatted);
+    }
+
+    if (key === 'Del') {
+      setCurrentGuess((prev) => prev.slice(0, -1));
+      return;
+    }
+    if (/^[A-Za-z]$/.test(key)) {
+      if (currentGuess.length < 5) {
+        setCurrentGuess((prev) => prev + key);
+      }
+    }
+  };
+
   return {
+    handleKeyClick,
     turn,
     currentGuess,
     guesses,

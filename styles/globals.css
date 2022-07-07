@@ -125,6 +125,7 @@ a {
 }
 
 .keypad > div {
+  cursor: pointer;
   display: flex;
   text-align: center;
   margin: 5px;
@@ -149,4 +150,8 @@ a {
 .keypad > div.yellow {
   background: #b59f3b;
   transition: all 0.3s ease-in;
+}
+
+.keypad > div.enter {
+  width: 60px;
 }

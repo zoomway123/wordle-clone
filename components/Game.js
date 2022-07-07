@@ -1,12 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import useWorlde from '../hooks/useWordle';
+import useWordle from '../hooks/useWordle';
 import Grid from './Grid';
 import Keyboard from './Keyboard';
 import Modal from './Modal';
 
 const Game = ({solution}) => {
-  const {currentGuess, handleKeyUp, guesses, isCorrect, turn, usedKeys} =
-    useWorlde(solution);
+  const {
+    currentGuess,
+    handleKeyUp,
+    handleKeyClick,
+    guesses,
+    isCorrect,
+    turn,
+    usedKeys,
+  } = useWordle(solution);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -29,12 +36,12 @@ const Game = ({solution}) => {
     }
 
     return () => window.removeEventListener('keyup', handleKeyUp);
-  }, [handleKeyUp, isCorrect]);
+  }, [handleKeyUp, isCorrect, handleKeyClick]);
 
   return (
     <div>
       <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-      <Keyboard usedKeys={usedKeys} />
+      <Keyboard usedKeys={usedKeys} handleKeyClick={handleKeyClick} />
       {showModal && (
         <Modal isCorrect={isCorrect} turn={turn} solution={solution} />
       )}

@@ -12,3 +12,7 @@ Fun little project aimed to sharpen and test my front end skills. Made with Next
 - Basic React/Next file structure
 - Use of useState & useEffect
 
+## Application overview
+- Fetches from /api/words to fetch a random word and stores in state
+- Allows for user to input 5 different letters
+- Checks if input matches exactly (green), is in the word but not at the right position (yellow), or not in the world at all (grey)

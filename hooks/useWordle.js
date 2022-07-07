@@ -39,7 +39,6 @@ const useWordle = (solution) => {
   //update if guess is corect
   //add turn to state
   const addNewGuess = (guess) => {
-    console.log('GUESS:', guess, solution);
     if (currentGuess === solution) {
       console.log('u win');
       setIsCorrect(true);

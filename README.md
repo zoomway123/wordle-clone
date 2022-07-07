@@ -1,9 +1,7 @@
 Fun little project aimed to sharpen and test my front end skills. Made with NextJS 
 
 ## Things left to add
-- Add a fully working keyboard that allows users to click on letters.
 - Add implmentation of local storage to allow users to save progress
-- Responsiveness (wasn't really the focus)
 
 ## Topics learned and used during this project
 - Made a custom hook

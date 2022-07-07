@@ -1,37 +1,4 @@
-import {useEffect, useState} from 'react';
-
-import React from 'react';
-
 const Keyboard = ({usedKeys, handleKeyClick}) => {
-  const keyboard = [
-    {key: 'a'},
-    {key: 'b'},
-    {key: 'c'},
-    {key: 'd'},
-    {key: 'e'},
-    {key: 'f'},
-    {key: 'g'},
-    {key: 'h'},
-    {key: 'i'},
-    {key: 'j'},
-    {key: 'k'},
-    {key: 'l'},
-    {key: 'm'},
-    {key: 'n'},
-    {key: 'o'},
-    {key: 'p'},
-    {key: 'q'},
-    {key: 'r'},
-    {key: 's'},
-    {key: 't'},
-    {key: 'u'},
-    {key: 'v'},
-    {key: 'w'},
-    {key: 'x'},
-    {key: 'y'},
-    {key: 'z'},
-  ];
-
   const row1 = [
     {key: 'q'},
     {key: 'w'},
@@ -66,8 +33,6 @@ const Keyboard = ({usedKeys, handleKeyClick}) => {
     {key: 'n'},
     {key: 'm'},
   ];
-
-  const [letters, setLetters] = useState(keyboard);
 
   const handleClick = (e) => {
     handleKeyClick(e.target.innerHTML);

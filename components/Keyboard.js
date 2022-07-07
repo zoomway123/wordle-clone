@@ -25,6 +25,7 @@ const Keyboard = ({usedKeys, handleKeyClick}) => {
   ];
 
   const row3 = [
+    {key: 'Del'},
     {key: 'z'},
     {key: 'x'},
     {key: 'c'},
@@ -56,9 +57,6 @@ const Keyboard = ({usedKeys, handleKeyClick}) => {
           </div>
         );
       })}
-      <div key={'delete'} className={usedKeys['delete']} onClick={handleClick}>
-        Del
-      </div>
       {row3.map((element) => {
         const color = usedKeys[element.key];
         return (

@@ -2,7 +2,7 @@ Fun little project aimed to sharpen and test my front end skills. Made with Next
 
 ## Things left to add
 
-- Add implement local storage to allow users to save progress
+- Implement local storage to allow users to save progress
 - Fix responsiveness on Mobile (not really a priority for the project)
 
 ## Topics learned and used during this project
